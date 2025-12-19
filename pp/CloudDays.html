@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Cloud-Days</title>
+  <meta name="description" content="Прогноз погоды >< ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200..800&display=swap" rel="stylesheet">
+  <link rel="icon" href="/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
+  <!-- Подключите CSS здесь (потом) -->
+  <link rel="stylesheet" href="CloudDays.css">
+
+  <!-- Open Graph / social meta (пример) -->
+  <meta property="og:title" content="Название сайта">
+  <meta property="og:description" content="Краткое описание сайта">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="/static/images/preview.png">
+</head>
+<body>
+  <header class="Site-Header">
+  <div class = "name">CloudyDays</div>
+  </header>
+  <div class="city-select-wrapper">
+    <div class="city-select">
+        <select id="citySelect" onchange="loadWeather()">
+            <option selected disabled>Выберите город</option>
+            <option>Алматы</option>
+            <option>Астана</option>
+            <option>Шымкент</option>
+            <option>Караганда</option>
+            <option>Талдыкорган</option>
+            <option>Павлодар</option>
+        </select>
+        <img src="free-icon-loupe-751463.png" alt="" class="search-icon">
+    </div>
+  </div>
+  
+  <div id="Weather">
+
+    <div class="weather-card">
+        <h3>Прогноз на сегодня</h3>
+        <p id="today"><span></span></p>
+    </div>
+
+    <div class="weather-card">
+        <h3>Прогноз на завтра</h3>
+        <p id="tomorrow"><span></span></p>
+    </div>
+
+    <div class="weather-card">
+        <h3>Прогноз на неделю</h3>
+        <p id="week"><span></span></p>
+    </div>
+
+  </div>
+
+  
+
+  
+  <footer>
+    <div>
+       <h4>Контакты</h4>
+       <address>
+         grivaroman2006@gmail.com<br>
+         +7 (700) 000-00-00
+       </address>
+    </div>
+ 
+    <div class="copyright">
+       © <span id="year">2025</span> Ваша компания. Все права защищены.
+    </div>
+ </footer>
+ 
+
+  <!-- ====== Скрипты: подключите потом ваш JS/бандл ====== -->
+  <script src="CloudDays.js" defer></script>
+
+  <script>
+    // Небольшие утилиты, которые можно оставить
+    // Пример: переключение мобильного меню
+     (function(){
+      const btn = document.getElementById('nav-toggle');
+      const nav = document.getElementById('main-nav');
+      if(!btn || !nav) return;
+      btn.addEventListener('click', ()=>{
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('open');
+      });
+    })();
+
+    // Устанавливаем текущий год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+
+html {
+    background-image:
+        url("maxresdefault.jpg");
+        margin: 0;
+        padding: 0;
+       background-attachment: fixed;
+       background-size: cover; 
+       background-repeat: no-repeat; 
+      }
+.name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    padding-top: 1px;
+    font-family: "Gugi", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 38px;
+}
+body {
+    display: flex;
+    min-height: 95vh;
+    flex-direction: column;
+}
+
+
+#today {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+#tomorrow {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+#week {
+    font-size: 25px;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+
+.city-select-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.city-select {
+    position: relative;bottom: 20px;
+    width: 300px;
+}
+
+.city-select select { /*выпадающий список*/
+    width: 100%;
+    padding: 10px 40px 10px 12px;
+    border-radius: 10px;
+    background: white;
+    border: 1.5px solid black;
+    font-size: 15px;
+    outline: none;
+
+    appearance: none;
+}
+
+
+.search-icon { 
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;      
+    height: 18px;
+    opacity: 0.7;
+    pointer-events: none;
+}
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; 
+    text-align: right;    
+    padding: 20px;
+}
+#Weather {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 450px;
+    margin: 30px;
+}
+
+/* сама карточка */
+.weather-card {
+    background-image:url("maxresdefault.jpg") ;
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(76px);
+    font-size: 25px;
+    margin-bottom: 20px;
+    width: 850px;
+}
+
+/* Заголовок карточки */
+.weather-card h3 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: white;
+    font-family: "Gemunu Libre", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 22px;
+    font-style: normal;
+}
+
+/* Текст прогноза */
+.weather-card p {
+    margin: 0;
+    font-size: 20px;
+    color: white;
+}
